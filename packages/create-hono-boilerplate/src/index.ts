@@ -114,6 +114,7 @@ async function main() {
   // 2. create-bomb-boilerplate 패키지 제거
   console.log(pc.green('🗑️  불필요한 파일 정리 중...'));
   await runCommand('rm', ['-rf', 'packages/create-bomb-boilerplate'], targetDir);
+  await runCommand('rm', ['-rf', '.github'], targetDir);
 
   // 3. 조직명 변경
   console.log(pc.green(`🔄 @mono를 @${orgName}로 변경 중...`));
