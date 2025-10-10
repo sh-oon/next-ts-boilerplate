@@ -82,22 +82,26 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: create-hono-boilerplate-dist
           path: packages/create-hono-boilerplate/dist
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-
       - name: Publish to NPM
         run: |
           cd packages/create-hono-boilerplate
-          npm publish --provenance --access public
+          npm publish --provenance --access public --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
