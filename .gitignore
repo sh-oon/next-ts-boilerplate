@@ -38,3 +38,6 @@ yarn-error.log*
 .yarn/build-state.yml
 .yarn/unplugged
 
+# Biome
+.biome/cache
+

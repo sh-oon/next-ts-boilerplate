@@ -15,12 +15,11 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "lint": "biome check src",
-    "lint:fix": "biome check --write src",
+    "lint:fix": "biome check --write --unsafe src",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.0",
-    "@mono/biome-config": "*",
+    "@biomejs/biome": "^2.2.5",
     "@mono/tsconfig": "*",
     "tsup": "~8.5.0",
     "typescript": "~5.9.2"

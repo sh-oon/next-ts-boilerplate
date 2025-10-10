@@ -87,14 +87,6 @@ Next.js 기반의 웹 애플리케이션입니다.
 
 ### Packages
 
-#### @mono/biome-config
-
-공유 Biome 설정 패키지입니다.
-
-- `biome.json` - 기본 TypeScript 설정
-- `biome.react.json` - React 컴포넌트용
-- `biome.library.json` - 라이브러리용 (엄격)
-
 #### @mono/tsconfig
 
 공유 TypeScript 설정 패키지입니다.
@@ -160,8 +152,33 @@ yarn init -y
 
 - **빠른 속도**: Rust로 작성되어 ESLint보다 25배 빠름
 - **올인원**: 린터 + 포매터 통합 (ESLint + Prettier 대체)
-- **Import 정렬**: 자동으로 import 문 정렬 및 최적화
-- **VSCode 통합**: 저장 시 자동 포맷팅 및 린트
+- **Import 정렬**: `assist.actions.source.organizeImports` 활성화로 자동 정렬
+- **VSCode 통합**: 저장 시 자동 포맷팅 및 import 정렬
+- **Overrides**: 프로젝트별로 다른 규칙 적용 가능
+
+### Biome 설정 구조
+
+루트 `biome.json`에서 모든 설정을 중앙 관리하며, `overrides`로 프로젝트별 규칙을 적용합니다:
+
+- **apps/web & packages/ui**: React + a11y 규칙 적용
+- **packages/utils**: 더 엄격한 규칙 (noExplicitAny: error)
+
+### Import 정렬 순서
+
+[Biome 공식 문서](https://biomejs.dev/assist/actions/organize-imports/#_top)를 참고하여 다음 순서로 정렬됩니다:
+
+1. `react` - React 라이브러리
+2. `next`, `next/**` - Next.js 관련 (apps/web만)
+3. `:Library:` - 외부 라이브러리 (node_modules)
+4. `@mono/**` - 내부 모노레포 패키지
+5. `**` - 상대 경로 import
+6. `{ "type": true }` - Type import
+
+### Import 정렬 사용법
+
+1. **VSCode에서**: 파일 저장 시 자동 정렬
+2. **커맨드로**: `yarn lint:fix` 실행
+3. **수동으로**: VSCode에서 `Shift + Cmd + P` → "Organize Imports"
 
 ### VSCode 설정
 
