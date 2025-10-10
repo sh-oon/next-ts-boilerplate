@@ -3,28 +3,10 @@
 import pc from 'picocolors';
 import prompts from 'prompts';
 import { spawn } from 'node:child_process';
-import { copyFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
-const templateDir = resolve(__dirname, '../template');
-
-async function copyDir(src: string, dest: string): Promise<void> {
-  await mkdir(dest, { recursive: true });
-  const entries = await readdir(src, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const srcPath = join(src, entry.name);
-    const destPath = join(dest, entry.name);
-
-    if (entry.isDirectory()) {
-      await copyDir(srcPath, destPath);
-    } else {
-      await copyFile(srcPath, destPath);
-    }
-  }
-}
+const REPO_URL = 'https://github.com/sh-oon/next-ts-boilerplate.git';
 
 async function replaceInFile(filePath: string, oldValue: string, newValue: string): Promise<void> {
   const content = await readFile(filePath, 'utf-8');
@@ -118,19 +100,34 @@ async function main() {
   console.log(pc.blue(`📁 위치: ${targetDir}`));
   console.log(pc.blue(`🏢 조직명: @${orgName}\n`));
 
-  // 1. 템플릿 복사
-  console.log(pc.green('📋 템플릿 복사 중...'));
-  await copyDir(templateDir, targetDir);
+  // 1. GitHub에서 클론
+  console.log(pc.green('📋 GitHub에서 템플릿 클론 중...'));
+  try {
+    await runCommand('git', ['clone', '--depth=1', REPO_URL, projectName], process.cwd());
+    // .git 디렉토리 제거 (새 git history 시작)
+    await runCommand('rm', ['-rf', '.git'], targetDir);
+  } catch (error) {
+    console.error(pc.red('\n❌ GitHub 클론 실패:'), error);
+    process.exit(1);
+  }
 
-  // 2. 조직명 변경
+  // 2. create-hono-boilerplate 패키지 제거
+  console.log(pc.green('🗑️  불필요한 파일 정리 중...'));
+  await runCommand('rm', ['-rf', 'packages/create-hono-boilerplate'], targetDir);
+
+  // 3. 조직명 변경
   console.log(pc.green(`🔄 @mono를 @${orgName}로 변경 중...`));
   await replaceInDirectory(targetDir, '@mono', `@${orgName}`);
 
-  // 3. package.json의 name 변경
+  // 4. package.json의 name 변경
   const pkgJsonPath = join(targetDir, 'package.json');
   await replaceInFile(pkgJsonPath, '"name": "hono-boilerplate"', `"name": "${projectName}"`);
 
-  // 4. 의존성 설치
+  // 5. git 초기화
+  console.log(pc.green('🔧 Git 초기화 중...'));
+  await runCommand('git', ['init'], targetDir);
+
+  // 6. 의존성 설치
   console.log(pc.green('\n📦 의존성 설치 중...\n'));
   try {
     await runCommand('corepack', ['enable'], targetDir);

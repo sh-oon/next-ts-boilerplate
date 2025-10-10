@@ -41,6 +41,3 @@ yarn-error.log*
 # Biome
 .biome/cache
 
-# Create package template
-packages/create-hono-boilerplate/template
-
