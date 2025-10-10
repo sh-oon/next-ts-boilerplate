@@ -604,23 +604,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mono/ web@workspace:apps/web":
-  version: 0.0.0-use.local
-  resolution: "@mono/ web@workspace:apps/web"
-  dependencies:
-    "@biomejs/biome": "npm:^2.2.0"
-    "@tailwindcss/postcss": "npm:^4"
-    "@types/node": "npm:^24"
-    "@types/react": "npm:^19"
-    "@types/react-dom": "npm:^19"
-    next: "npm:15.5.4"
-    react: "npm:19.2.0"
-    react-dom: "npm:19.2.0"
-    tailwindcss: "npm:^4"
-    typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
-
 "@mono/tsconfig@npm:*, @mono/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@mono/tsconfig@workspace:packages/tsconfig"
@@ -651,6 +634,23 @@ __metadata:
     "@mono/tsconfig": "npm:*"
     tsup: "npm:~8.5.0"
     typescript: "npm:~5.9.2"
+  languageName: unknown
+  linkType: soft
+
+"@mono/web@workspace:apps/web":
+  version: 0.0.0-use.local
+  resolution: "@mono/web@workspace:apps/web"
+  dependencies:
+    "@biomejs/biome": "npm:^2.2.0"
+    "@tailwindcss/postcss": "npm:^4"
+    "@types/node": "npm:^24"
+    "@types/react": "npm:^19"
+    "@types/react-dom": "npm:^19"
+    next: "npm:15.5.4"
+    react: "npm:19.2.0"
+    react-dom: "npm:19.2.0"
+    tailwindcss: "npm:^4"
+    typescript: "npm:^5"
   languageName: unknown
   linkType: soft
 
