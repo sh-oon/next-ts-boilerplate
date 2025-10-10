@@ -97,6 +97,7 @@ jobs:
       - name: Publish to NPM
         run: |
           cd packages/create-hono-boilerplate
+          echo $NODE_AUTH_TOKEN
           npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
