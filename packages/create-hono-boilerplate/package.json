@@ -39,7 +39,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@mono/tsconfig": "*",
-    "@types/node": "^20.11.5",
+    "@types/node": "^24.7.1",
     "@types/prompts": "^2.4.9",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
