@@ -233,18 +233,25 @@ yarn init -y
 2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
 3. TypeScript 버전 선택 시 "Use Workspace Version" 선택
 
-## CI/CD
+## CI/CD Pipeline
 
-### CI (Continuous Integration)
+GitHub Actions를 통한 자동화된 워크플로우 (`.github/workflows/ci.yml`):
 
-- ✅ PR/Push 시 자동 lint, type-check
-- ✅ Yarn Berry 캐시 재사용
+### 1️⃣ Check (검증)
+- ✅ Lint (Biome)
+- ✅ Type check (TypeScript)
 
-### CD (NPM 배포)
+### 2️⃣ Build (빌드)
+- ✅ create-hono-boilerplate 패키지 빌드
+- ✅ 빌드 결과물 아티팩트 저장
 
-- ✅ GitHub Release 생성 시 자동 npm 배포
-- ✅ create-hono-boilerplate 자동 빌드 및 배포
+### 3️⃣ Publish (배포)
+- ✅ main 브랜치 푸시 시에만 실행
+- ✅ npm에 자동 배포
 - ✅ Provenance 포함 (보안)
+
+**PR 생성 시**: Check + Build만 실행  
+**main 푸시 시**: Check + Build + Publish 실행
 
 ## NPM 배포
 
