@@ -1,5 +1,6 @@
 # Yarn Workspace 모노레포 보일러플레이트
 
+[![CI](https://github.com/sh-oon/next-ts-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/sh-oon/next-ts-boilerplate/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Yarn](https://img.shields.io/badge/Yarn-4.x-2C8EBB?logo=yarn)](https://yarnpkg.com/)
 [![Biome](https://img.shields.io/badge/Biome-2.x-60A5FA?logo=biome)](https://biomejs.dev/)
@@ -9,8 +10,23 @@ TypeScript, Biome, Turbo를 사용하는 Yarn Berry 기반 모노레포 보일�
 
 ## 🚀 Quick Start
 
+### 방법 1: npm create (권장)
+
 ```bash
-# 1. 이 저장소를 클론하거나 템플릿으로 사용
+# npm
+npm create hono-boilerplate my-project
+
+# yarn
+yarn create hono-boilerplate my-project
+
+# pnpm
+pnpm create hono-boilerplate my-project
+```
+
+### 방법 2: Git Clone
+
+```bash
+# 1. 저장소 클론
 git clone https://github.com/sh-oon/next-ts-boilerplate.git my-project
 cd my-project
 
@@ -21,10 +37,8 @@ yarn install
 # 3. 조직명 설정 (예: mycompany)
 yarn setup
 
-# 4. 의존성 재설치
+# 4. 의존성 재설치 및 개발 시작
 yarn install
-
-# 5. 개발 시작
 yarn dev
 ```
 
@@ -219,28 +233,77 @@ yarn init -y
 2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
 3. TypeScript 버전 선택 시 "Use Workspace Version" 선택
 
+## CI/CD
+
+GitHub Actions를 통한 자동화된 워크플로우:
+
+### CI (Continuous Integration)
+
+- ✅ PR/Push 시 자동 lint, type-check, build
+- ✅ Turbo 캐시로 빌드 속도 최적화
+- ✅ Yarn Berry 캐시 재사용
+
+### CD (Continuous Deployment)
+
+- ✅ GitHub Release 생성 시 자동 npm 배포
+- ✅ Provenance 포함 (보안)
+- ✅ 자동 버전 관리
+
+자세한 내용은 [CI_CD.md](./CI_CD.md)를 참고하세요.
+
 ## NPM 배포
 
-이 보일러플레이트를 npm에 공개하려면:
+### 자동 배포 (권장)
 
 ```bash
-# 1. package.json의 private를 false로 설정 (이미 설정됨)
+# 1. 버전 업데이트
+cd packages/create-hono-boilerplate
+# package.json에서 version 변경 (예: 1.0.0 → 1.0.1)
+
+# 2. 커밋 및 푸시
+git add .
+git commit -m "chore: bump version to 1.0.1"
+git push
+
+# 3. GitHub에서 Release 생성
+# → GitHub Actions가 자동으로 npm 배포!
+```
+
+### 수동 배포
+
+```bash
+# 1. create 패키지 빌드
+yarn workspace create-hono-boilerplate build
+
 # 2. npm 로그인
 npm login
 
-# 3. 배포
-npm publish
+# 3. create 패키지 배포
+cd packages/create-hono-boilerplate
+npm publish --provenance --access public
 ```
 
-사용자들은 다음과 같이 사용할 수 있습니다:
+### 사용자 사용법
+
+배포 후 사용자들은 다음과 같이 사용할 수 있습니다:
 
 ```bash
-npx mono-yarn-nextjs-boilerplate my-project
-# 또는
-git clone https://github.com/sh-oon/next-ts-boilerplate.git my-project
-cd my-project
-yarn setup
+# npm
+npm create hono-boilerplate my-project
+
+# yarn
+yarn create hono-boilerplate my-project
+
+# pnpm
+pnpm create hono-boilerplate my-project
 ```
+
+CLI가 자동으로:
+1. 템플릿 복사
+2. 조직명 입력 받기
+3. `@mono`를 사용자 조직명으로 변경
+4. 의존성 설치
+5. 프로젝트 완료!
 
 ## 라이선스
 

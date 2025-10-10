@@ -1,0 +1,50 @@
+{
+  "name": "create-hono-boilerplate",
+  "version": "1.0.0",
+  "description": "CLI to scaffold a Yarn Berry monorepo boilerplate with TypeScript, Biome, and Turbo",
+  "keywords": [
+    "create",
+    "monorepo",
+    "yarn-workspace",
+    "yarn-berry",
+    "typescript",
+    "biome",
+    "turbo",
+    "nextjs",
+    "boilerplate",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sh-oon/next-ts-boilerplate.git",
+    "directory": "packages/create-hono-boilerplate"
+  },
+  "license": "MIT",
+  "author": "sh-oon",
+  "type": "module",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist",
+    "template"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.5",
+    "@mono/tsconfig": "*",
+    "@types/node": "^20.11.5",
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
