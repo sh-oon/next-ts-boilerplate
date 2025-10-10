@@ -18,7 +18,6 @@
   },
   "license": "MIT",
   "author": "sh-oon",
-  "private": false,
   "workspaces": [
     "apps/*",
     "packages/*"

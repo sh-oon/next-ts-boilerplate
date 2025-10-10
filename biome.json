@@ -45,7 +45,8 @@
       "arrowParentheses": "always",
       "bracketSpacing": true,
       "bracketSameLine": false,
-      "quoteStyle": "single"
+      "quoteStyle": "single",
+      "attributePosition": "multiline"
     }
   },
   "assist": {
@@ -55,7 +56,16 @@
           "level": "on",
           "options": {
             "identifierOrder": "natural",
-            "groups": ["react", "next/**", ":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:", "@mono/**", ":ALIAS:", "**", { "type": true }]
+            "groups": [
+              "react",
+              "next/**",
+              ":PACKAGE:",
+              ":PACKAGE_WITH_PROTOCOL:",
+              "@mono/**",
+              ":ALIAS:",
+              "**",
+              { "type": true }
+            ]
           }
         }
       }

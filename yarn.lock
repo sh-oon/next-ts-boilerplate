@@ -1623,6 +1623,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hono-boilerplate@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "hono-boilerplate@workspace:."
+  dependencies:
+    "@biomejs/biome": "npm:^2.2.5"
+    "@mono/tsconfig": "npm:*"
+    glob: "npm:^11.0.0"
+    turbo: "npm:^1.12.4"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.2.0
   resolution: "http-cache-semantics@npm:4.2.0"
@@ -2035,18 +2047,6 @@ __metadata:
   checksum: 10c0/f174b844ae066c71e9b128046677868e2e28694f0bbeeffbe760b2a9d8ff24de0748d0fde6fabe706700c1d2e11d3c0d7a53071b5ea99671592fac03364604ab
   languageName: node
   linkType: hard
-
-"mono-yarn-nextjs-boilerplate@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "mono-yarn-nextjs-boilerplate@workspace:."
-  dependencies:
-    "@biomejs/biome": "npm:^2.2.5"
-    "@mono/tsconfig": "npm:*"
-    glob: "npm:^11.0.0"
-    turbo: "npm:^1.12.4"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "ms@npm:^2.1.3":
   version: 2.1.3
