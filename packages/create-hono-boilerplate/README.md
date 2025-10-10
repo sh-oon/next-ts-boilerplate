@@ -1,4 +1,4 @@
-# create-hono-boilerplate
+# create-bomb-boilerplate
 
 Yarn Berry 기반 모노레포 보일러플레이트를 빠르게 생성하는 CLI 도구입니다.
 
@@ -7,19 +7,19 @@ Yarn Berry 기반 모노레포 보일러플레이트를 빠르게 생성하는 C
 ### NPM
 
 ```bash
-npm create hono-boilerplate my-project
+npm create bomb-boilerplate my-project
 ```
 
 ### Yarn
 
 ```bash
-yarn create hono-boilerplate my-project
+yarn create bomb-boilerplate my-project
 ```
 
 ### PNPM
 
 ```bash
-pnpm create hono-boilerplate my-project
+pnpm create bomb-boilerplate my-project
 ```
 
 ## 생성되는 프로젝트
@@ -35,10 +35,10 @@ pnpm create hono-boilerplate my-project
 
 ```bash
 # 프로젝트명 지정
-npm create hono-boilerplate my-awesome-project
+npm create bomb-boilerplate my-awesome-project
 
 # 대화형 모드
-npm create hono-boilerplate
+npm create bomb-boilerplate
 ```
 
 ## 생성 후

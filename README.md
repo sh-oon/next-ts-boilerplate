@@ -14,13 +14,13 @@ TypeScript, Biome, Turbo를 사용하는 Yarn Berry 기반 모노레포 보일�
 
 ```bash
 # npm
-npm create hono-boilerplate my-project
+npm create bomb-boilerplate my-project
 
 # yarn
-yarn create hono-boilerplate my-project
+yarn create bomb-boilerplate my-project
 
 # pnpm
-pnpm create hono-boilerplate my-project
+pnpm create bomb-boilerplate my-project
 ```
 
 ### 방법 2: Git Clone
@@ -242,7 +242,7 @@ GitHub Actions를 통한 자동화된 워크플로우 (`.github/workflows/ci.yml
 - ✅ Type check (TypeScript)
 
 ### 2️⃣ Build (빌드)
-- ✅ create-hono-boilerplate 패키지 빌드
+- ✅ create-bomb-boilerplate 패키지 빌드
 - ✅ 빌드 결과물 아티팩트 저장
 
 ### 3️⃣ Publish (배포)
@@ -259,7 +259,7 @@ GitHub Actions를 통한 자동화된 워크플로우 (`.github/workflows/ci.yml
 
 ```bash
 # 1. 버전 업데이트
-cd packages/create-hono-boilerplate
+cd packages/create-bomb-boilerplate
 # package.json에서 version 변경 (예: 1.0.0 → 1.0.1)
 
 # 2. 커밋 및 푸시
@@ -275,13 +275,13 @@ git push
 
 ```bash
 # 1. create 패키지 빌드
-yarn workspace create-hono-boilerplate build
+yarn workspace create-bomb-boilerplate build
 
 # 2. npm 로그인
 npm login
 
 # 3. create 패키지 배포
-cd packages/create-hono-boilerplate
+cd packages/create-bomb-boilerplate
 npm publish --provenance --access public
 ```
 
@@ -291,13 +291,13 @@ npm publish --provenance --access public
 
 ```bash
 # npm
-npm create hono-boilerplate my-project
+npm create bomb-boilerplate my-project
 
 # yarn
-yarn create hono-boilerplate my-project
+yarn create bomb-boilerplate my-project
 
 # pnpm
-pnpm create hono-boilerplate my-project
+pnpm create bomb-boilerplate my-project
 ```
 
 CLI가 자동으로:

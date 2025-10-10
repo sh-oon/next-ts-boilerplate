@@ -56,15 +56,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Build create-hono-boilerplate
-        run: yarn workspace create-hono-boilerplate build
+      - name: Build create-bomb-boilerplate
+        run: yarn workspace create-bomb-boilerplate build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         with:
-          name: create-hono-boilerplate-dist
-          path: packages/create-hono-boilerplate/dist
+          name: create-bomb-boilerplate-dist
+          path: packages/create-bomb-boilerplate/dist
           retention-days: 1
 
   publish:
@@ -95,12 +95,12 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: create-hono-boilerplate-dist
-          path: packages/create-hono-boilerplate/dist
+          name: create-bomb-boilerplate-dist
+          path: packages/create-bomb-boilerplate/dist
 
       - name: Publish to NPM
         run: |
-          cd packages/create-hono-boilerplate
+          cd packages/create-bomb-boilerplate
           npm publish --provenance --access public --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

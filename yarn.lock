@@ -1207,6 +1207,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bomb-boilerplate@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "bomb-boilerplate@workspace:."
+  dependencies:
+    "@biomejs/biome": "npm:^2.2.5"
+    "@mono/tsconfig": "npm:*"
+    glob: "npm:^11.0.0"
+    turbo: "npm:^2.5.8"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "brace-expansion@npm:^2.0.1":
   version: 2.0.2
   resolution: "brace-expansion@npm:2.0.2"
@@ -1321,9 +1333,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-hono-boilerplate@workspace:packages/create-hono-boilerplate":
+"create-bomb-boilerplate@workspace:packages/create-hono-boilerplate":
   version: 0.0.0-use.local
-  resolution: "create-hono-boilerplate@workspace:packages/create-hono-boilerplate"
+  resolution: "create-bomb-boilerplate@workspace:packages/create-hono-boilerplate"
   dependencies:
     "@biomejs/biome": "npm:^2.2.5"
     "@mono/tsconfig": "npm:*"
@@ -1334,7 +1346,7 @@ __metadata:
     tsup: "npm:^8.0.1"
     typescript: "npm:^5.3.3"
   bin:
-    create-hono-boilerplate: ./dist/index.js
+    create-bomb-boilerplate: ./dist/index.js
   languageName: unknown
   linkType: soft
 
@@ -1624,18 +1636,6 @@ __metadata:
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
   languageName: node
   linkType: hard
-
-"hono-boilerplate@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "hono-boilerplate@workspace:."
-  dependencies:
-    "@biomejs/biome": "npm:^2.2.5"
-    "@mono/tsconfig": "npm:*"
-    glob: "npm:^11.0.0"
-    turbo: "npm:^2.5.8"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "http-cache-semantics@npm:^4.1.1":
   version: 4.2.0

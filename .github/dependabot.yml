@@ -50,7 +50,7 @@ updates:
       - 'packages'
 
   - package-ecosystem: 'npm'
-    directory: '/packages/create-hono-boilerplate'
+    directory: '/packages/create-bomb-boilerplate'
     schedule:
       interval: 'weekly'
     labels:

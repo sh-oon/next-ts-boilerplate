@@ -1,6 +1,6 @@
 # NPM 배포 가이드
 
-## create-hono-boilerplate 배포 절차
+## create-bomb-boilerplate 배포 절차
 
 ### 1. 준비 사항
 
@@ -10,7 +10,7 @@
 ### 2. 배포 전 체크리스트
 
 - [ ] 모든 테스트 통과
-- [ ] 버전 업데이트 (`packages/create-hono-boilerplate/package.json`)
+- [ ] 버전 업데이트 (`packages/create-bomb-boilerplate/package.json`)
 - [ ] CHANGELOG 작성
 - [ ] README 확인
 
@@ -18,13 +18,13 @@
 
 ```bash
 # 1. create 패키지 빌드
-yarn workspace create-hono-boilerplate build
+yarn workspace create-bomb-boilerplate build
 
 # 2. npm 로그인 (처음 한 번만)
 npm login
 
 # 3. 패키지 디렉토리로 이동
-cd packages/create-hono-boilerplate
+cd packages/create-bomb-boilerplate
 
 # 4. 배포 (dry-run으로 먼저 테스트)
 npm publish --dry-run
@@ -40,11 +40,11 @@ cd ../..
 
 ```bash
 # 배포된 패키지 확인
-npm info create-hono-boilerplate
+npm info create-bomb-boilerplate
 
 # 새 디렉토리에서 테스트
 cd /tmp
-npm create hono-boilerplate test-project
+npm create bomb-boilerplate test-project
 ```
 
 ### 5. 버전 업데이트
@@ -82,10 +82,10 @@ npm login
 
 ```bash
 # template 디렉토리 재생성
-rm -rf packages/create-hono-boilerplate/template
-rsync -av --exclude='node_modules' --exclude='.yarn/cache' --exclude='.git' --exclude='packages/create-hono-boilerplate' . packages/create-hono-boilerplate/template/
+rm -rf packages/create-bomb-boilerplate/template
+rsync -av --exclude='node_modules' --exclude='.yarn/cache' --exclude='.git' --exclude='packages/create-bomb-boilerplate' . packages/create-bomb-boilerplate/template/
 
 # 다시 빌드
-yarn workspace create-hono-boilerplate build
+yarn workspace create-bomb-boilerplate build
 ```
 

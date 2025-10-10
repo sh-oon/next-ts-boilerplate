@@ -17,7 +17,7 @@
 
 ### Features
 
-- **CLI**: `npm create hono-boilerplate my-project`
+- **CLI**: `npm create bomb-boilerplate my-project`
 - **Custom import order**: react → next → libraries → @mono → relative → types
 - **Auto setup**: Copies template and configures organization name
 - **Zero config**: Works out of the box
