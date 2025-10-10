@@ -1333,9 +1333,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-bomb-boilerplate@workspace:packages/create-hono-boilerplate":
+"create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate":
   version: 0.0.0-use.local
-  resolution: "create-bomb-boilerplate@workspace:packages/create-hono-boilerplate"
+  resolution: "create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate"
   dependencies:
     "@biomejs/biome": "npm:^2.2.5"
     "@mono/tsconfig": "npm:*"
