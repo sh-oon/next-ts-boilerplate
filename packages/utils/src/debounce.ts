@@ -4,6 +4,7 @@
  * @param wait - 지연 시간 (밀리초)
  * @returns debounce된 함수
  */
+// biome-ignore lint/suspicious/noExplicitAny: Generic function utility requires any for flexibility
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -22,4 +23,3 @@ export function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(later, wait);
   };
 }
-

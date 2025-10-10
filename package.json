@@ -9,15 +9,15 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
     "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@mono/eslint-config": "*",
+    "@biomejs/biome": "^2.2.0",
+    "@mono/biome-config": "*",
     "@mono/tsconfig": "*",
-    "eslint": "^9.15.0",
-    "prettier": "^3.2.5",
     "turbo": "^1.12.4",
     "typescript": "^5.3.3"
   },

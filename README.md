@@ -24,12 +24,12 @@ TypeScript, Next.js, ESLint, Prettier를 사용하는 Yarn Workspace 기반 모�
 
 - ✅ **Yarn Berry (v4)**: 최신 Yarn Workspace 기반 모노레포 관리
 - ✅ **TypeScript**: 전체 프로젝트에 TypeScript 적용
-- ✅ **Next.js**: React 기반 웹 프레임워크
 - ✅ **Turbo**: 빠른 빌드 및 캐싱 시스템
-- ✅ **ESLint**: 코드 품질 관리
-  - import/order 자동 정렬 기능 포함
-  - React, TypeScript 규칙 적용
-- ✅ **Prettier**: 코드 포맷팅
+- ✅ **Biome**: 초고속 린터 및 포매터 (ESLint + Prettier 대체)
+  - import 자동 정렬
+  - 코드 품질 관리
+  - 코드 포맷팅
+  - TypeScript, React 지원
 
 ## 시작하기
 
@@ -65,7 +65,13 @@ yarn build
 yarn lint
 ```
 
-### 6. 코드 포맷팅
+### 6. 린트 자동 수정 및 포맷팅
+
+```bash
+yarn lint:fix
+```
+
+### 7. 코드 포맷팅
 
 ```bash
 yarn format
@@ -81,13 +87,13 @@ Next.js 기반의 웹 애플리케이션입니다.
 
 ### Packages
 
-#### @mono/eslint-config
+#### @mono/biome-config
 
-공유 ESLint 설정 패키지입니다 (Flat Config 방식).
+공유 Biome 설정 패키지입니다.
 
-- `base.js` - TypeScript + import/order
-- `react.js` - React 라이브러리용
-- `next.js` - Next.js 앱용
+- `biome.json` - 기본 TypeScript 설정
+- `biome.react.json` - React 컴포넌트용
+- `biome.library.json` - 라이브러리용 (엄격)
 
 #### @mono/tsconfig
 
@@ -138,8 +144,9 @@ yarn init -y
 
 - `yarn dev` - 모든 앱을 개발 모드로 실행
 - `yarn build` - 모든 앱과 패키지 빌드
-- `yarn lint` - 모든 프로젝트에 대해 린트 실행
-- `yarn format` - Prettier로 코드 포맷팅
+- `yarn lint` - Biome으로 린트 실행
+- `yarn lint:fix` - Biome으로 린트 자동 수정
+- `yarn format` - Biome으로 코드 포맷팅
 - `yarn type-check` - TypeScript 타입 체크
 
 ## Yarn Berry 특징
@@ -149,23 +156,15 @@ yarn init -y
 - **Zero-installs**: 선택적으로 캐시를 git에 커밋 가능 (현재는 .gitignore 처리)
 - **Workspace 프로토콜**: 내부 패키지는 `*` 버전 사용
 
+## Biome 특징
+
+- **빠른 속도**: Rust로 작성되어 ESLint보다 25배 빠름
+- **올인원**: 린터 + 포매터 통합 (ESLint + Prettier 대체)
+- **Import 정렬**: 자동으로 import 문 정렬 및 최적화
+- **VSCode 통합**: 저장 시 자동 포맷팅 및 린트
+
 ### VSCode 설정
 
-Yarn Berry를 VSCode에서 사용하려면:
-
-1. `ZipFS` 익스텐션 설치 (권장)
-2. TypeScript 버전 선택 시 "Use Workspace Version" 선택
-3. `.yarn/sdks` 디렉토리가 자동으로 생성됨
-
-## ESLint import/order
-
-import 구문은 다음 순서로 자동 정렬됩니다:
-
-1. `react` 관련 import
-2. `next` 관련 import
-3. 외부 라이브러리 (node_modules)
-4. 내부 패키지 (`@mono/*`)
-5. 상대 경로 import
-6. 타입 import
-
-각 그룹 사이에는 빈 줄이 자동으로 추가되며, 알파벳 순으로 정렬됩니다.
+1. Biome VSCode 익스텐션 설치 (권장)
+2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
+3. TypeScript 버전 선택 시 "Use Workspace Version" 선택

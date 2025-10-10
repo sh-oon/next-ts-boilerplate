@@ -14,13 +14,14 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "lint": "eslint src",
+    "lint": "biome check src",
+    "lint:fix": "biome check --write src",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@mono/eslint-config": "*",
+    "@biomejs/biome": "^2.2.0",
+    "@mono/biome-config": "*",
     "@mono/tsconfig": "*",
-    "eslint": "^9.15.0",
     "tsup": "~8.5.0",
     "typescript": "~5.9.2"
   }

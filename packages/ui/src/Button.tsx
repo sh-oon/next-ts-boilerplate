@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 export interface ButtonProps {
   children: React.ReactNode;
@@ -37,6 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      type="button"
       style={{ ...baseStyle, ...variantStyle }}
       onClick={onClick}
       disabled={disabled}
@@ -46,7 +47,17 @@ export const Button: React.FC<ButtonProps> = ({
           e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
         }
       }}
+      onFocus={(e) => {
+        if (!disabled) {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        }
+      }}
       onMouseOut={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = 'none';
+      }}
+      onBlur={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = 'none';
       }}
@@ -55,4 +66,3 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-

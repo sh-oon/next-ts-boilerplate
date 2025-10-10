@@ -1,0 +1,10 @@
+{
+  "name": "@mono/biome-config",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "biome.json",
+    "biome.react.json",
+    "biome.library.json"
+  ]
+}
