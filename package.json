@@ -1,12 +1,30 @@
 {
   "name": "mono-yarn-nextjs-boilerplate",
   "version": "1.0.0",
-  "private": true,
+  "description": "Yarn Berry workspace based monorepo boilerplate with TypeScript, Biome, and Turbo",
+  "keywords": [
+    "monorepo",
+    "yarn-workspace",
+    "yarn-berry",
+    "typescript",
+    "biome",
+    "turbo",
+    "nextjs",
+    "boilerplate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sh-oon/next-ts-boilerplate.git"
+  },
+  "license": "MIT",
+  "author": "sh-oon",
+  "private": false,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
+    "setup": "node scripts/setup.mjs",
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "biome check .",
@@ -17,6 +35,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@mono/tsconfig": "*",
+    "glob": "^11.0.0",
     "turbo": "^1.12.4",
     "typescript": "^5.3.3"
   },

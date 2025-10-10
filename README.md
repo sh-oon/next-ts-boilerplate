@@ -1,6 +1,32 @@
 # Yarn Workspace 모노레포 보일러플레이트
 
-TypeScript, Next.js, ESLint, Prettier를 사용하는 Yarn Workspace 기반 모노레포 보일러플레이트입니다.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Yarn](https://img.shields.io/badge/Yarn-4.x-2C8EBB?logo=yarn)](https://yarnpkg.com/)
+[![Biome](https://img.shields.io/badge/Biome-2.x-60A5FA?logo=biome)](https://biomejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+
+TypeScript, Biome, Turbo를 사용하는 Yarn Berry 기반 모노레포 보일러플레이트입니다.
+
+## 🚀 Quick Start
+
+```bash
+# 1. 이 저장소를 클론하거나 템플릿으로 사용
+git clone https://github.com/sh-oon/next-ts-boilerplate.git my-project
+cd my-project
+
+# 2. Yarn Berry 활성화 및 의존성 설치
+corepack enable
+yarn install
+
+# 3. 조직명 설정 (예: mycompany)
+yarn setup
+
+# 4. 의존성 재설치
+yarn install
+
+# 5. 개발 시작
+yarn dev
+```
 
 ## 프로젝트 구조
 
@@ -33,13 +59,19 @@ TypeScript, Next.js, ESLint, Prettier를 사용하는 Yarn Workspace 기반 모�
 
 ## 시작하기
 
-### 1. Yarn Berry 활성화
+### 1. 조직명 설정 (첫 설정 시)
+
+보일러플레이트를 처음 사용하는 경우, 조직명을 설정하세요:
 
 ```bash
 corepack enable
+yarn install
+yarn setup
 ```
 
-### 2. 의존성 설치
+스크립트가 실행되면 조직명(예: `mycompany`)을 입력하면 모든 `@mono` 참조가 `@mycompany`로 자동 변경됩니다.
+
+### 2. 의존성 재설치
 
 ```bash
 yarn install
@@ -134,6 +166,7 @@ yarn init -y
 
 ## 스크립트
 
+- `yarn setup` - 조직명 설정 (첫 설정 시)
 - `yarn dev` - 모든 앱을 개발 모드로 실행
 - `yarn build` - 모든 앱과 패키지 빌드
 - `yarn lint` - Biome으로 린트 실행
@@ -185,3 +218,30 @@ yarn init -y
 1. Biome VSCode 익스텐션 설치 (권장)
 2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
 3. TypeScript 버전 선택 시 "Use Workspace Version" 선택
+
+## NPM 배포
+
+이 보일러플레이트를 npm에 공개하려면:
+
+```bash
+# 1. package.json의 private를 false로 설정 (이미 설정됨)
+# 2. npm 로그인
+npm login
+
+# 3. 배포
+npm publish
+```
+
+사용자들은 다음과 같이 사용할 수 있습니다:
+
+```bash
+npx mono-yarn-nextjs-boilerplate my-project
+# 또는
+git clone https://github.com/sh-oon/next-ts-boilerplate.git my-project
+cd my-project
+yarn setup
+```
+
+## 라이선스
+
+MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
