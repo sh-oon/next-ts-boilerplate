@@ -233,23 +233,13 @@ yarn init -y
 2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
 3. TypeScript 버전 선택 시 "Use Workspace Version" 선택
 
-## CI/CD
+## CI (Continuous Integration)
 
 GitHub Actions를 통한 자동화된 워크플로우:
-
-### CI (Continuous Integration)
 
 - ✅ PR/Push 시 자동 lint, type-check, build
 - ✅ Turbo 캐시로 빌드 속도 최적화
 - ✅ Yarn Berry 캐시 재사용
-
-### CD (Continuous Deployment)
-
-- ✅ GitHub Release 생성 시 자동 npm 배포
-- ✅ Provenance 포함 (보안)
-- ✅ 자동 버전 관리
-
-자세한 내용은 [CI_CD.md](./CI_CD.md)를 참고하세요.
 
 ## NPM 배포
 
