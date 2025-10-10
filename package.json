@@ -1,5 +1,5 @@
 {
-  "name": "mono-yarn-nextjs-boilerplate",
+  "name": "hono-boilerplate",
   "version": "1.0.0",
   "description": "Yarn Berry workspace based monorepo boilerplate with TypeScript, Biome, and Turbo",
   "keywords": [
