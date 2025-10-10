@@ -8,6 +8,8 @@ Yarn Berry 기반 모노레포 보일러플레이트를 빠르게 생성하는 C
 
 ```bash
 npm create bomb-boilerplate my-project
+# 또는
+npx create-bomb-boilerplate my-project
 ```
 
 ### Yarn
@@ -35,10 +37,10 @@ pnpm create bomb-boilerplate my-project
 
 ```bash
 # 프로젝트명 지정
-npm create bomb-boilerplate my-awesome-project
+npx create-bomb-boilerplate my-awesome-project
 
 # 대화형 모드
-npm create bomb-boilerplate
+npx create-bomb-boilerplate
 ```
 
 ## 생성 후
@@ -51,4 +53,3 @@ yarn dev
 ## 라이선스
 
 MIT
-

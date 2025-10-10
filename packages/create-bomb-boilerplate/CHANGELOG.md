@@ -17,8 +17,18 @@
 
 ### Features
 
-- **CLI**: `npm create bomb-boilerplate my-project`
+- **CLI**: `npx create-bomb-boilerplate my-project`
 - **Custom import order**: react → next → libraries → @mono → relative → types
-- **Auto setup**: Copies template and configures organization name
+- **Auto setup**: Clones from GitHub and configures organization name
 - **Zero config**: Works out of the box
 
+--------------------------------
+
+## [1.0.1] - 2025-10-10
+
+### Fixed
+
+- **Docs**: Fix import auto-organize
+- **Docs**: Fix interactive CLI
+- **Docs**: Fix automatic organization name replacement
+- **Docs**: Fix CLI usage

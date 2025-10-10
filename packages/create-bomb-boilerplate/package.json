@@ -1,6 +1,6 @@
 {
   "name": "create-bomb-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to scaffold a Yarn Berry monorepo boilerplate with TypeScript, Biome, and Turbo",
   "keywords": [
     "create",

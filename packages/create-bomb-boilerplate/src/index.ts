@@ -58,7 +58,7 @@ function runCommand(command: string, args: string[], cwd: string): Promise<void>
 }
 
 async function main() {
-  console.log(pc.cyan('\n🚀 bomb Boilerplate CLI\n'));
+  console.log(pc.cyan('\n🚀 Bomb Boilerplate CLI\n'));
 
   const args = process.argv.slice(2);
   let projectName = args[0];
@@ -106,15 +106,14 @@ async function main() {
     await runCommand('git', ['clone', '--depth=1', REPO_URL, projectName], process.cwd());
     // .git 디렉토리 제거 (새 git history 시작)
     await runCommand('rm', ['-rf', '.git'], targetDir);
-  } catch (error) {
-    console.error(pc.red('\n❌ GitHub 클론 실패:'), error);
+  } catch (_error) {
+    console.error(pc.red('\n❌ GitHub 클론 실패'));
     process.exit(1);
   }
 
   // 2. create-bomb-boilerplate 패키지 제거
   console.log(pc.green('🗑️  불필요한 파일 정리 중...'));
   await runCommand('rm', ['-rf', 'packages/create-bomb-boilerplate'], targetDir);
-  await runCommand('rm', ['-rf', '.github'], targetDir);
 
   // 3. 조직명 변경
   console.log(pc.green(`🔄 @mono를 @${orgName}로 변경 중...`));
@@ -122,7 +121,7 @@ async function main() {
 
   // 4. package.json의 name 변경
   const pkgJsonPath = join(targetDir, 'package.json');
-  await replaceInFile(pkgJsonPath, '"name": "bomb-boilerplate"', `"name": "${projectName}"`);
+  await replaceInFile(pkgJsonPath, '"name": "hono-boilerplate"', `"name": "${projectName}"`);
 
   // 5. git 초기화
   console.log(pc.green('🔧 Git 초기화 중...'));
