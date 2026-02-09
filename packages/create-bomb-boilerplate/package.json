@@ -40,8 +40,8 @@
     "@mono/tsconfig": "*",
     "@types/node": "^24.7.1",
     "@types/prompts": "^2.4.9",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "tsup": "^8",
+    "typescript": "^5"
   },
   "engines": {
     "node": ">=18.0.0"
