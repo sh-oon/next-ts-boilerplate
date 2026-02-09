@@ -29,14 +29,23 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write --unsafe .",
     "format": "biome format --write .",
-    "type-check": "turbo run type-check"
+    "prepare": "husky",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@mono/tsconfig": "*",
     "glob": "^11.0.0",
+    "husky": "^9",
+    "lint-staged": "^15",
     "turbo": "^2.5.8",
     "typescript": "^5"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.1.0",
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
+  }
 }
