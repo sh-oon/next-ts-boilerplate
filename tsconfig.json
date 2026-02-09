@@ -1,5 +1,9 @@
 {
-  "extends": "@mono/tsconfig/base.json",
+  "extends": "./packages/tsconfig/base.json",
   "files": [],
-  "references": [{ "path": "./packages/ui" }, { "path": "./packages/utils" }]
+  "references": [
+    { "path": "./apps/web" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/utils" }
+  ]
 }

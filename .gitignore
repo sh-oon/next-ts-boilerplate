@@ -34,11 +34,14 @@ yarn-error.log*
 # turbo
 .turbo
 
-# Yarn Berry (node-modules mode)
-.yarn/cache
-.yarn/install-state.gz
-.yarn/build-state.yml
-.yarn/unplugged
+# Yarn Berry (PnP)
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # Biome
 .biome/cache

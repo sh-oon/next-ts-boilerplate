@@ -1,8 +1,7 @@
 {
-  "extends": "@mono/tsconfig/react-library.json",
+  "extends": "../tsconfig/react-library.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "composite": true
+    "rootDir": "./src"
   },
   "include": ["./src/**/*"]
 }
