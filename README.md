@@ -49,14 +49,14 @@ yarn dev
 ├── apps/
 │   └── web/              # Next.js 웹 애플리케이션
 ├── packages/
-│   ├── eslint-config/    # 공유 ESLint 설정
 │   ├── tsconfig/         # 공유 TypeScript 설정
 │   ├── ui/               # 공유 UI 컴포넌트
 │   └── utils/            # 공유 유틸리티 함수
+├── .pnp.cjs              # Yarn PnP 모듈 해석
+├── .yarn/                # Yarn Berry 캐시 및 SDK
 ├── package.json          # 루트 package.json (workspace 설정)
 ├── tsconfig.json         # 루트 TypeScript 설정
-├── .eslintrc.js          # 루트 ESLint 설정
-├── .prettierrc.js        # Prettier 설정
+├── biome.json            # Biome 린터/포매터 설정
 └── turbo.json            # Turbo 빌드 시스템 설정
 ```
 
@@ -190,10 +190,12 @@ yarn init -y
 
 ## Yarn Berry 특징
 
-- **node_modules 모드**: 호환성을 위해 node_modules linker 사용
-- **로컬 캐시**: `.yarn/cache` 디렉토리에 의존성 캐시
-- **Zero-installs**: 선택적으로 캐시를 git에 커밋 가능 (현재는 .gitignore 처리)
+- **PnP (Plug'n'Play)**: `node_modules` 없이 `.pnp.cjs`를 통한 의존성 해석
+- **로컬 캐시**: `.yarn/cache` 디렉토리에 의존성을 zip으로 캐시
+- **TypeScript SDK**: `.yarn/sdks/typescript`로 에디터 타입 해석 지원
 - **Workspace 프로토콜**: 내부 패키지는 `*` 버전 사용
+
+> **참고**: PnP 모드에서는 `node_modules` 디렉토리가 생성되지 않습니다. Next.js의 `next build`는 Webpack 모드로 동작하며, `next dev`에서는 Turbopack을 사용합니다.
 
 ## Biome 특징
 
@@ -227,11 +229,17 @@ yarn init -y
 2. **커맨드로**: `yarn lint:fix` 실행
 3. **수동으로**: VSCode에서 `Shift + Cmd + P` → "Organize Imports"
 
-### VSCode 설정
+### 에디터 설정
 
+#### VSCode
 1. Biome VSCode 익스텐션 설치 (권장)
-2. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
-3. TypeScript 버전 선택 시 "Use Workspace Version" 선택
+2. [ZipFS 익스텐션](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs) 설치 (PnP zip 파일 탐색용)
+3. 저장 시 자동 포맷팅 및 import 정렬 활성화됨
+4. TypeScript 버전 선택 시 "Use Workspace Version" 선택
+
+#### WebStorm
+1. Yarn PnP를 자체 지원하므로 별도 설정 불필요
+2. Biome 플러그인 설치 권장
 
 ## CI/CD Pipeline
 
