@@ -1,6 +1,7 @@
 {
-  "extends": "@mono/tsconfig/base.json",
+  "extends": "../tsconfig/base.json",
   "compilerOptions": {
+    "lib": ["ES2020", "DOM"],
     "outDir": "./dist",
     "rootDir": "./src"
   },

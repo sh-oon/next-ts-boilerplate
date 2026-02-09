@@ -121,7 +121,7 @@ async function main() {
 
   // 4. package.json의 name 변경
   const pkgJsonPath = join(targetDir, 'package.json');
-  await replaceInFile(pkgJsonPath, '"name": "hono-boilerplate"', `"name": "${projectName}"`);
+  await replaceInFile(pkgJsonPath, '"name": "bomb-boilerplate"', `"name": "${projectName}"`);
 
   // 5. git 초기화
   console.log(pc.green('🔧 Git 초기화 중...'));
