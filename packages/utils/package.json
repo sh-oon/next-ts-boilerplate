@@ -26,6 +26,6 @@
     "@mono/tsconfig": "*",
     "tsup": "^8",
     "typescript": "^5",
-    "vitest": "^3"
+    "vitest": "^4"
   }
 }
