@@ -1,6 +1,6 @@
 # NPM 배포 가이드
 
-## create-bomb-boilerplate 배포 절차
+## @ziclo/create-bomb-boilerplate 배포 절차
 
 ### 1. 준비 사항
 
@@ -18,7 +18,7 @@
 
 ```bash
 # 1. create 패키지 빌드
-yarn workspace create-bomb-boilerplate build
+yarn workspace @ziclo/create-bomb-boilerplate build
 
 # 2. npm 로그인 (처음 한 번만)
 npm login
@@ -40,11 +40,11 @@ cd ../..
 
 ```bash
 # 배포된 패키지 확인
-npm info create-bomb-boilerplate
+npm info @ziclo/create-bomb-boilerplate
 
 # 새 디렉토리에서 테스트
 cd /tmp
-npm create bomb-boilerplate test-project
+npm create @ziclo/bomb-boilerplate test-project
 ```
 
 ### 5. 버전 업데이트
@@ -86,6 +86,6 @@ rm -rf packages/create-bomb-boilerplate/template
 rsync -av --exclude='node_modules' --exclude='.yarn/cache' --exclude='.git' --exclude='packages/create-bomb-boilerplate' . packages/create-bomb-boilerplate/template/
 
 # 다시 빌드
-yarn workspace create-bomb-boilerplate build
+yarn workspace @ziclo/create-bomb-boilerplate build
 ```
 
