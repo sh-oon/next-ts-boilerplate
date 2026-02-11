@@ -42,6 +42,6 @@
 - Import 자동 정렬 (커스텀 그룹)
 - 공유 패키지: `@mono/ui-components`, `@mono/utils`, `@mono/tsconfig`
 - Next.js 15 웹 애플리케이션 (`@mono/web`)
-- `create-bomb-boilerplate` CLI
+- `@ziclo/create-bomb-boilerplate` CLI
 - GitHub Actions CI/CD 파이프라인
 - Husky + lint-staged 커밋 훅

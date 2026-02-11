@@ -1733,6 +1733,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ziclo/create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate":
+  version: 0.0.0-use.local
+  resolution: "@ziclo/create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate"
+  dependencies:
+    "@biomejs/biome": "npm:^2.2.5"
+    "@mono/tsconfig": "npm:*"
+    "@types/node": "npm:^24.7.1"
+    "@types/prompts": "npm:^2.4.9"
+    picocolors: "npm:^1.1.1"
+    prompts: "npm:^2.4.2"
+    tsup: "npm:^8"
+    typescript: "npm:^5"
+  bin:
+    create-bomb-boilerplate: ./dist/index.js
+  languageName: unknown
+  linkType: soft
+
 "abbrev@npm:^3.0.0":
   version: 3.0.1
   resolution: "abbrev@npm:3.0.1"
@@ -2066,23 +2083,6 @@ __metadata:
   checksum: 10c0/7cebe57ecf646ba74b300bcce23bff43034ed6fbec9f7e39c27cee1dc00df8a21cd336b466ad32e304ea70fba04ec9e890c200270de9a526ce021ba8a7e4c11a
   languageName: node
   linkType: hard
-
-"create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate":
-  version: 0.0.0-use.local
-  resolution: "create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate"
-  dependencies:
-    "@biomejs/biome": "npm:^2.2.5"
-    "@mono/tsconfig": "npm:*"
-    "@types/node": "npm:^24.7.1"
-    "@types/prompts": "npm:^2.4.9"
-    picocolors: "npm:^1.1.1"
-    prompts: "npm:^2.4.2"
-    tsup: "npm:^8"
-    typescript: "npm:^5"
-  bin:
-    create-bomb-boilerplate: ./dist/index.js
-  languageName: unknown
-  linkType: soft
 
 "cross-spawn@npm:^7.0.3, cross-spawn@npm:^7.0.5, cross-spawn@npm:^7.0.6":
   version: 7.0.6
