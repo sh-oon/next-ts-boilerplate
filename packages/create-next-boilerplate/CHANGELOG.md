@@ -17,7 +17,7 @@
 
 ### Features
 
-- **CLI**: `npx create-bomb-boilerplate my-project`
+- **CLI**: `npx @ziclo/create-next-boilerplate my-project`
 - **Custom import order**: react → next → libraries → @mono → relative → types
 - **Auto setup**: Clones from GitHub and configures organization name
 - **Zero config**: Works out of the box

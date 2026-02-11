@@ -1,27 +1,27 @@
-# @ziclo/create-bomb-boilerplate
+# @ziclo/create-next-boilerplate
 
-Yarn Berry 기반 모노레포 보일러플레이트를 빠르게 생성하는 CLI 도구입니다.
+Yarn Berry 기반 Next.js 모노레포 보일러플레이트를 빠르게 생성하는 CLI 도구입니다.
 
 ## 사용법
 
 ### NPM
 
 ```bash
-npm create @ziclo/bomb-boilerplate my-project
+npm create @ziclo/next-boilerplate my-project
 # 또는
-npx @ziclo/create-bomb-boilerplate my-project
+npx @ziclo/create-next-boilerplate my-project
 ```
 
 ### Yarn
 
 ```bash
-yarn create @ziclo/bomb-boilerplate my-project
+yarn create @ziclo/next-boilerplate my-project
 ```
 
 ### PNPM
 
 ```bash
-pnpm create @ziclo/bomb-boilerplate my-project
+pnpm create @ziclo/next-boilerplate my-project
 ```
 
 ## 생성되는 프로젝트
@@ -37,10 +37,10 @@ pnpm create @ziclo/bomb-boilerplate my-project
 
 ```bash
 # 프로젝트명 지정
-npx @ziclo/create-bomb-boilerplate my-awesome-project
+npx @ziclo/create-next-boilerplate my-awesome-project
 
 # 대화형 모드
-npx @ziclo/create-bomb-boilerplate
+npx @ziclo/create-next-boilerplate
 ```
 
 ## 생성 후

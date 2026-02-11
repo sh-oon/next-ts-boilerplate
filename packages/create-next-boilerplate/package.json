@@ -1,5 +1,5 @@
 {
-  "name": "@ziclo/create-bomb-boilerplate",
+  "name": "@ziclo/create-next-boilerplate",
   "version": "2.0.0",
   "description": "CLI to scaffold a Yarn Berry monorepo boilerplate with TypeScript, Biome, and Turbo",
   "keywords": [
@@ -17,7 +17,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sh-oon/next-ts-boilerplate.git",
-    "directory": "packages/create-bomb-boilerplate"
+    "directory": "packages/create-next-boilerplate"
   },
   "license": "MIT",
   "author": "sh-oon",

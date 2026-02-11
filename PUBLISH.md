@@ -1,6 +1,6 @@
 # NPM 배포 가이드
 
-## @ziclo/create-bomb-boilerplate 배포 절차
+## @ziclo/create-next-boilerplate 배포 절차
 
 ### 1. 준비 사항
 
@@ -10,7 +10,7 @@
 ### 2. 배포 전 체크리스트
 
 - [ ] 모든 테스트 통과
-- [ ] 버전 업데이트 (`packages/create-bomb-boilerplate/package.json`)
+- [ ] 버전 업데이트 (`packages/create-next-boilerplate/package.json`)
 - [ ] CHANGELOG 작성
 - [ ] README 확인
 
@@ -18,13 +18,13 @@
 
 ```bash
 # 1. create 패키지 빌드
-yarn workspace @ziclo/create-bomb-boilerplate build
+yarn workspace @ziclo/create-next-boilerplate build
 
 # 2. npm 로그인 (처음 한 번만)
 npm login
 
 # 3. 패키지 디렉토리로 이동
-cd packages/create-bomb-boilerplate
+cd packages/create-next-boilerplate
 
 # 4. 배포 (dry-run으로 먼저 테스트)
 npm publish --dry-run
@@ -40,11 +40,11 @@ cd ../..
 
 ```bash
 # 배포된 패키지 확인
-npm info @ziclo/create-bomb-boilerplate
+npm info @ziclo/create-next-boilerplate
 
 # 새 디렉토리에서 테스트
 cd /tmp
-npm create @ziclo/bomb-boilerplate test-project
+npm create @ziclo/next-boilerplate test-project
 ```
 
 ### 5. 버전 업데이트
@@ -82,10 +82,10 @@ npm login
 
 ```bash
 # template 디렉토리 재생성
-rm -rf packages/create-bomb-boilerplate/template
-rsync -av --exclude='node_modules' --exclude='.yarn/cache' --exclude='.git' --exclude='packages/create-bomb-boilerplate' . packages/create-bomb-boilerplate/template/
+rm -rf packages/create-next-boilerplate/template
+rsync -av --exclude='node_modules' --exclude='.yarn/cache' --exclude='.git' --exclude='packages/create-next-boilerplate' . packages/create-next-boilerplate/template/
 
 # 다시 빌드
-yarn workspace @ziclo/create-bomb-boilerplate build
+yarn workspace @ziclo/create-next-boilerplate build
 ```
 
