@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1] - 2026-02-11
+
+### Added
+
+- `pre-push` 훅으로 브랜치 네이밍 규칙 강제 (`v{semver}/{type}/{description}`)
+- PR 템플릿 개선 (Summary / Changes / Test Plan)
+
 ## [1.1.0] - 2026-02-09
 
 ### Changed
