@@ -1733,9 +1733,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ziclo/create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate":
+"@ziclo/create-next-boilerplate@workspace:packages/create-next-boilerplate":
   version: 0.0.0-use.local
-  resolution: "@ziclo/create-bomb-boilerplate@workspace:packages/create-bomb-boilerplate"
+  resolution: "@ziclo/create-next-boilerplate@workspace:packages/create-next-boilerplate"
   dependencies:
     "@biomejs/biome": "npm:^2.2.5"
     "@mono/tsconfig": "npm:*"
@@ -1746,7 +1746,7 @@ __metadata:
     tsup: "npm:^8"
     typescript: "npm:^5"
   bin:
-    create-bomb-boilerplate: ./dist/index.js
+    create-next-boilerplate: ./dist/index.js
   languageName: unknown
   linkType: soft
 

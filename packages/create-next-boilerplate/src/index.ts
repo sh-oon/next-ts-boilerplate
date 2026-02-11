@@ -58,7 +58,7 @@ function runCommand(command: string, args: string[], cwd: string): Promise<void>
 }
 
 async function main() {
-  console.log(pc.cyan('\n🚀 Bomb Boilerplate CLI\n'));
+  console.log(pc.cyan('\n🚀 Next.js Boilerplate CLI\n'));
 
   const args = process.argv.slice(2);
   let projectName = args[0];
@@ -111,9 +111,9 @@ async function main() {
     process.exit(1);
   }
 
-  // 2. create-bomb-boilerplate 패키지 제거
+  // 2. create-next-boilerplate 패키지 제거
   console.log(pc.green('🗑️  불필요한 파일 정리 중...'));
-  await runCommand('rm', ['-rf', 'packages/create-bomb-boilerplate'], targetDir);
+  await runCommand('rm', ['-rf', 'packages/create-next-boilerplate'], targetDir);
 
   // 3. 조직명 변경
   console.log(pc.green(`🔄 @mono를 @${orgName}로 변경 중...`));
