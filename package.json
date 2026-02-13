@@ -23,6 +23,9 @@
     "packages/*"
   ],
   "scripts": {
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
     "setup": "node scripts/setup.mjs",
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -39,6 +42,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
+    "@changesets/cli": "^2.29.4",
     "@mono/tsconfig": "*",
     "glob": "^11.0.0",
     "husky": "^9",
