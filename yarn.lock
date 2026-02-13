@@ -1485,7 +1485,7 @@ __metadata:
     "@storybook/react": "npm:^10"
     "@storybook/react-vite": "npm:^10"
     "@tailwindcss/vite": "npm:^4"
-    "@types/node": "npm:^25.2.2"
+    "@types/node": "npm:^25.2.3"
     "@types/react": "npm:^19.2.2"
     "@types/react-dom": "npm:^19"
     gsap: "npm:^3.14.2"
@@ -1513,7 +1513,7 @@ __metadata:
     "@mono/shared": "npm:*"
     "@mono/ui": "npm:*"
     "@tailwindcss/postcss": "npm:^4"
-    "@types/node": "npm:^24"
+    "@types/node": "npm:^25"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     next: "npm:15.5.4"
@@ -2727,7 +2727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24, @types/node@npm:^24.7.1":
+"@types/node@npm:*":
   version: 24.7.1
   resolution: "@types/node@npm:24.7.1"
   dependencies:
@@ -2743,7 +2743,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.2.2":
+"@types/node@npm:^25, @types/node@npm:^25.2.3":
   version: 25.2.3
   resolution: "@types/node@npm:25.2.3"
   dependencies:
@@ -2906,7 +2906,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:^2.3.15"
     "@mono/tsconfig": "npm:*"
-    "@types/node": "npm:^24.7.1"
+    "@types/node": "npm:^25.2.3"
     "@types/prompts": "npm:^2.4.9"
     picocolors: "npm:^1.1.1"
     prompts: "npm:^2.4.2"
