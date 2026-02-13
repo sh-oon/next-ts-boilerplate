@@ -1,0 +1,14 @@
+{
+  "name": "@mono/lib",
+  "version": "1.0.0",
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./semantic.css": "./src/semantic.css",
+    "./typography.css": "./src/typography.css"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.5",
+    "@mono/tsconfig": "*",
+    "typescript": "^5"
+  }
+}
