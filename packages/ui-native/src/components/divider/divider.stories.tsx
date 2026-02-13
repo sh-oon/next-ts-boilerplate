@@ -23,9 +23,19 @@ type Story = StoryObj<typeof Divider>;
 export const Horizontal: Story = {
   render: () => (
     <View style={{ gap: 12, width: 300 }}>
-      <Text typography="text-sm-regular" color="foreground">Above</Text>
+      <Text
+        typography="text-sm-regular"
+        color="foreground"
+      >
+        Above
+      </Text>
       <Divider />
-      <Text typography="text-sm-regular" color="foreground">Below</Text>
+      <Text
+        typography="text-sm-regular"
+        color="foreground"
+      >
+        Below
+      </Text>
     </View>
   ),
 };
@@ -33,9 +43,19 @@ export const Horizontal: Story = {
 export const Vertical: Story = {
   render: () => (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12, height: 40 }}>
-      <Text typography="text-sm-regular" color="foreground">Left</Text>
+      <Text
+        typography="text-sm-regular"
+        color="foreground"
+      >
+        Left
+      </Text>
       <Divider orientation="vertical" />
-      <Text typography="text-sm-regular" color="foreground">Right</Text>
+      <Text
+        typography="text-sm-regular"
+        color="foreground"
+      >
+        Right
+      </Text>
     </View>
   ),
 };

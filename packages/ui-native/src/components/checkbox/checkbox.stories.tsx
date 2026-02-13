@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Checkbox } from './checkbox';
 
@@ -44,9 +44,18 @@ export const WithDescription: Story = {
 export const Sizes: Story = {
   render: () => (
     <View style={{ gap: 12 }}>
-      <Checkbox size="sm" label="Small" />
-      <Checkbox size="md" label="Medium" />
-      <Checkbox size="lg" label="Large" />
+      <Checkbox
+        size="sm"
+        label="Small"
+      />
+      <Checkbox
+        size="md"
+        label="Medium"
+      />
+      <Checkbox
+        size="lg"
+        label="Large"
+      />
     </View>
   ),
 };

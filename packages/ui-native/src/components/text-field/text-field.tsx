@@ -50,7 +50,7 @@ export function TextField({
       if (!isControlled) setInternalValue(text);
       onChangeText?.(text);
     },
-    [isControlled, onChangeText],
+    [isControlled, onChangeText]
   );
 
   const handleClear = useCallback(() => {
@@ -89,13 +89,9 @@ export function TextField({
     <View style={{ opacity: 0.5 }}>{endIcon}</View>
   ) : undefined;
 
-  const startAdornment = startIcon ? (
-    <View style={{ opacity: 0.5 }}>{startIcon}</View>
-  ) : undefined;
+  const startAdornment = startIcon ? <View style={{ opacity: 0.5 }}>{startIcon}</View> : undefined;
 
-  const floatingLabel = label
-    ? required ? `${label} *` : label
-    : undefined;
+  const floatingLabel = label ? (required ? `${label} *` : label) : undefined;
 
   return (
     <View style={{ gap: 6 }}>

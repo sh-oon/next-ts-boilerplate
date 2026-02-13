@@ -49,15 +49,32 @@ export const CardPlaceholder: Story = {
   render: () => (
     <View style={{ gap: 12, width: 300 }}>
       <View style={{ flexDirection: 'row', gap: 12, alignItems: 'center' }}>
-        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton
+          variant="circular"
+          width={40}
+          height={40}
+        />
         <View style={{ flex: 1, gap: 6 }}>
-          <Skeleton variant="text" width={120} />
-          <Skeleton variant="text" width={80} height={12} />
+          <Skeleton
+            variant="text"
+            width={120}
+          />
+          <Skeleton
+            variant="text"
+            width={80}
+            height={12}
+          />
         </View>
       </View>
-      <Skeleton variant="rectangular" height={160} />
+      <Skeleton
+        variant="rectangular"
+        height={160}
+      />
       <Skeleton variant="text" />
-      <Skeleton variant="text" width={200} />
+      <Skeleton
+        variant="text"
+        width={200}
+      />
     </View>
   ),
 };

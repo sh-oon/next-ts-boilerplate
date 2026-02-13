@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Input } from './input';
 
@@ -47,9 +47,18 @@ export const ErrorState: Story = {
 export const Sizes: Story = {
   render: () => (
     <View style={{ gap: 12, width: 300 }}>
-      <Input inputSize="sm" placeholder="Small" />
-      <Input inputSize="md" placeholder="Medium" />
-      <Input inputSize="lg" placeholder="Large" />
+      <Input
+        inputSize="sm"
+        placeholder="Small"
+      />
+      <Input
+        inputSize="md"
+        placeholder="Medium"
+      />
+      <Input
+        inputSize="lg"
+        placeholder="Large"
+      />
     </View>
   ),
 };

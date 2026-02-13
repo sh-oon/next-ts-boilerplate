@@ -35,7 +35,11 @@ export function FixedBottomCTA({
       setKeyboardVisible(true);
       const duration = e.duration || 250;
       Animated.parallel([
-        Animated.timing(bottom, { toValue: e.endCoordinates.height, duration, useNativeDriver: false }),
+        Animated.timing(bottom, {
+          toValue: e.endCoordinates.height,
+          duration,
+          useNativeDriver: false,
+        }),
         Animated.timing(paddingH, { toValue: 0, duration, useNativeDriver: false }),
         Animated.timing(paddingTop, { toValue: 0, duration, useNativeDriver: false }),
         Animated.timing(paddingBottom, { toValue: 0, duration, useNativeDriver: false }),
@@ -49,7 +53,11 @@ export function FixedBottomCTA({
         Animated.timing(bottom, { toValue: 0, duration, useNativeDriver: false }),
         Animated.timing(paddingH, { toValue: 16, duration, useNativeDriver: false }),
         Animated.timing(paddingTop, { toValue: 12, duration, useNativeDriver: false }),
-        Animated.timing(paddingBottom, { toValue: 12 + safeAreaBottom, duration, useNativeDriver: false }),
+        Animated.timing(paddingBottom, {
+          toValue: 12 + safeAreaBottom,
+          duration,
+          useNativeDriver: false,
+        }),
       ]).start();
     });
 

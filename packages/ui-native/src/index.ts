@@ -13,9 +13,9 @@ export { Divider } from './components/divider';
 export type { FixedBottomCTAProps } from './components/fixed-bottom-cta';
 export { FixedBottomCTA } from './components/fixed-bottom-cta';
 export type { FlexAlign, FlexDirection, FlexJustify, FlexProps, FlexWrap } from './components/flex';
+export { Flex } from './components/flex';
 export type { GridProps } from './components/grid';
 export { Grid } from './components/grid';
-export { Flex } from './components/flex';
 export type { InputProps, InputSize, InputVariant } from './components/input';
 export { Input } from './components/input';
 export type { ProgressColor, ProgressProps, ProgressSize } from './components/progress';
@@ -32,14 +32,14 @@ export type { SwitchProps, SwitchSize } from './components/switch';
 export { Switch } from './components/switch';
 export type { TagProps, TagSize, TagVariant } from './components/tag';
 export { Tag } from './components/tag';
-export type { TextareaProps, TextareaSize, TextareaVariant } from './components/textarea';
-export { Textarea } from './components/textarea';
-export type { TextFieldProps } from './components/text-field';
-export { TextField } from './components/text-field';
 // Component types
 export type { TextProps } from './components/text';
 // Components
 export { Text } from './components/text';
+export type { TextFieldProps } from './components/text-field';
+export { TextField } from './components/text-field';
+export type { TextareaProps, TextareaSize, TextareaVariant } from './components/textarea';
+export { Textarea } from './components/textarea';
 export type { AgentsTheme, ThemeColors } from './theme/theme';
 // Theme
 export { darkTheme, lightTheme } from './theme/theme';

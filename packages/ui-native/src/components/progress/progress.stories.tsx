@@ -40,9 +40,18 @@ export const WithLabel: Story = {
 export const Sizes: Story = {
   render: () => (
     <View style={{ gap: 16, width: 300 }}>
-      <Progress value={60} size="sm" />
-      <Progress value={60} size="md" />
-      <Progress value={60} size="lg" />
+      <Progress
+        value={60}
+        size="sm"
+      />
+      <Progress
+        value={60}
+        size="md"
+      />
+      <Progress
+        value={60}
+        size="lg"
+      />
     </View>
   ),
 };
@@ -50,10 +59,22 @@ export const Sizes: Story = {
 export const Colors: Story = {
   render: () => (
     <View style={{ gap: 16, width: 300 }}>
-      <Progress value={60} color="primary" />
-      <Progress value={60} color="success" />
-      <Progress value={60} color="warning" />
-      <Progress value={60} color="error" />
+      <Progress
+        value={60}
+        color="primary"
+      />
+      <Progress
+        value={60}
+        color="success"
+      />
+      <Progress
+        value={60}
+        color="warning"
+      />
+      <Progress
+        value={60}
+        color="error"
+      />
     </View>
   ),
 };

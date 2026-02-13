@@ -60,7 +60,10 @@ export const Column: Story = {
 
 export const SpaceBetween: Story = {
   render: () => (
-    <Flex justify="between" style={{ width: 300 }}>
+    <Flex
+      justify="between"
+      style={{ width: 300 }}
+    >
       <Box />
       <Box color="#d4d4d9" />
       <Box color="#a1a1a8" />
@@ -70,7 +73,12 @@ export const SpaceBetween: Story = {
 
 export const Centered: Story = {
   render: () => (
-    <Flex align="center" justify="center" gap={12} style={{ height: 120 }}>
+    <Flex
+      align="center"
+      justify="center"
+      gap={12}
+      style={{ height: 120 }}
+    >
       <Box />
       <Box color="#d4d4d9" />
       <Box color="#a1a1a8" />
@@ -80,7 +88,11 @@ export const Centered: Story = {
 
 export const Wrap: Story = {
   render: () => (
-    <Flex wrap="wrap" gap={8} style={{ width: 160 }}>
+    <Flex
+      wrap="wrap"
+      gap={8}
+      style={{ width: 160 }}
+    >
       <Box />
       <Box color="#d4d4d9" />
       <Box color="#a1a1a8" />

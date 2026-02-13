@@ -18,15 +18,15 @@ export interface TextareaProps extends Omit<TextInputProps, 'style'> {
 // Input padding when floating: pt-6(24px)
 const sizeConfig = {
   sm: {
-    minHeight: 96,      // web: min-h-24
-    fontSize: 14,       // web: text-sm
+    minHeight: 96, // web: min-h-24
+    fontSize: 14, // web: text-sm
     floatingFontSize: 11,
     floatingTopDefault: 24, // matches inputPaddingTop — text starts here (top-aligned)
-    floatingTopFloated: 8,  // web: top-2(8px)
-    inputPaddingTop: 24,    // web: pt-6
+    floatingTopFloated: 8, // web: top-2(8px)
+    inputPaddingTop: 24, // web: pt-6
   },
   md: {
-    minHeight: 128,     // web: min-h-32
+    minHeight: 128, // web: min-h-32
     fontSize: 14,
     floatingFontSize: 11,
     floatingTopDefault: 24,
@@ -34,8 +34,8 @@ const sizeConfig = {
     inputPaddingTop: 24,
   },
   lg: {
-    minHeight: 160,     // web: min-h-40
-    fontSize: 16,       // web: text-base
+    minHeight: 160, // web: min-h-40
+    fontSize: 16, // web: text-base
     floatingFontSize: 12,
     floatingTopDefault: 24,
     floatingTopFloated: 8,
@@ -69,7 +69,7 @@ export function Textarea({
         useNativeDriver: false,
       }).start();
     },
-    [floatAnim],
+    [floatAnim]
   );
 
   const handleFocus: TextInputProps['onFocus'] = useCallback(
@@ -78,7 +78,7 @@ export function Textarea({
       animateFloat(1);
       onFocus?.(e);
     },
-    [onFocus, animateFloat],
+    [onFocus, animateFloat]
   );
 
   const handleBlur: TextInputProps['onBlur'] = useCallback(
@@ -87,7 +87,7 @@ export function Textarea({
       if (!value) animateFloat(0);
       onBlur?.(e);
     },
-    [onBlur, value, animateFloat],
+    [onBlur, value, animateFloat]
   );
 
   const borderBottomColor =

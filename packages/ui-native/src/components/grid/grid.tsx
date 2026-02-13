@@ -1,4 +1,9 @@
-import React, { type ComponentPropsWithoutRef, type ElementType, type ReactNode, useState } from 'react';
+import React, {
+  type ComponentPropsWithoutRef,
+  type ElementType,
+  type ReactNode,
+  useState,
+} from 'react';
 import type { ViewStyle } from 'react-native';
 import { View } from 'react-native';
 
@@ -35,9 +40,7 @@ export function Grid<C extends ElementType = typeof View>({
   const resolvedColumnGap = columnGap ?? gap;
   const resolvedRowGap = rowGap ?? gap;
   const itemWidth =
-    containerWidth > 0
-      ? (containerWidth - resolvedColumnGap * (columns - 1)) / columns
-      : undefined;
+    containerWidth > 0 ? (containerWidth - resolvedColumnGap * (columns - 1)) / columns : undefined;
 
   return (
     <Component

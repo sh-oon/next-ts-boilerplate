@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Switch } from './switch';
 
@@ -44,9 +44,18 @@ export const WithDescription: Story = {
 export const Sizes: Story = {
   render: () => (
     <View style={{ gap: 16 }}>
-      <Switch size="sm" label="Small" />
-      <Switch size="md" label="Medium" />
-      <Switch size="lg" label="Large" />
+      <Switch
+        size="sm"
+        label="Small"
+      />
+      <Switch
+        size="md"
+        label="Medium"
+      />
+      <Switch
+        size="lg"
+        label="Large"
+      />
     </View>
   ),
 };

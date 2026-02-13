@@ -27,26 +27,26 @@ const sizeConfig = {
   sm: {
     height: 40,
     fontSize: 14,
-    floatingFontSize: 11,   // ~14 * 0.75
-    floatingTopFloated: 4,  // web: top-1(4px)
-    inputPaddingTop: 16,    // web: pt-4
-    inputPaddingBottom: 2,  // web: pb-0.5
+    floatingFontSize: 11, // ~14 * 0.75
+    floatingTopFloated: 4, // web: top-1(4px)
+    inputPaddingTop: 16, // web: pt-4
+    inputPaddingBottom: 2, // web: pb-0.5
   },
   md: {
     height: 48,
     fontSize: 14,
     floatingFontSize: 11,
     floatingTopFloated: 4,
-    inputPaddingTop: 20,    // web: pt-5
-    inputPaddingBottom: 4,  // web: pb-1
+    inputPaddingTop: 20, // web: pt-5
+    inputPaddingBottom: 4, // web: pb-1
   },
   lg: {
     height: 56,
     fontSize: 16,
-    floatingFontSize: 12,   // ~16 * 0.75
+    floatingFontSize: 12, // ~16 * 0.75
     floatingTopFloated: 4,
-    inputPaddingTop: 24,    // web: pt-6
-    inputPaddingBottom: 4,  // web: pb-1
+    inputPaddingTop: 24, // web: pt-6
+    inputPaddingBottom: 4, // web: pb-1
   },
 } as const;
 
@@ -78,7 +78,7 @@ export function Input({
         useNativeDriver: false,
       }).start();
     },
-    [floatAnim],
+    [floatAnim]
   );
 
   const handleFocus: TextInputProps['onFocus'] = useCallback(
@@ -87,7 +87,7 @@ export function Input({
       animateFloat(1);
       onFocus?.(e);
     },
-    [onFocus, animateFloat],
+    [onFocus, animateFloat]
   );
 
   const handleBlur: TextInputProps['onBlur'] = useCallback(
@@ -96,7 +96,7 @@ export function Input({
       if (!value) animateFloat(0);
       onBlur?.(e);
     },
-    [onBlur, value, animateFloat],
+    [onBlur, value, animateFloat]
   );
 
   const borderBottomColor =
@@ -147,9 +147,7 @@ export function Input({
         containerStyle,
       ]}
     >
-      {startAdornment && (
-        <View style={{ justifyContent: 'center' }}>{startAdornment}</View>
-      )}
+      {startAdornment && <View style={{ justifyContent: 'center' }}>{startAdornment}</View>}
       <View style={{ flex: 1, position: 'relative' }}>
         {isFloating && (
           <Animated.Text
@@ -183,9 +181,7 @@ export function Input({
           {...rest}
         />
       </View>
-      {endAdornment && (
-        <View style={{ justifyContent: 'center' }}>{endAdornment}</View>
-      )}
+      {endAdornment && <View style={{ justifyContent: 'center' }}>{endAdornment}</View>}
     </View>
   );
 }

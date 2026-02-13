@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
-import { Text } from '../text';
 import { Button } from '../button';
+import { Text } from '../text';
 import { FixedBottomCTA } from './fixed-bottom-cta';
 
 const meta: Meta<typeof FixedBottomCTA> = {
@@ -42,7 +42,10 @@ export const WithContent: Story = {
     <View style={{ height: 400, backgroundColor: '#f5f5f5' }}>
       <View style={{ flex: 1, padding: 16, gap: 12 }}>
         <Text typography="title-lg-bold">약관에 동의해주세요</Text>
-        <Text typography="text-md-regular" color="mutedForeground">
+        <Text
+          typography="text-md-regular"
+          color="mutedForeground"
+        >
           서비스 이용을 위해 아래 약관에 동의해주세요.
         </Text>
       </View>
@@ -73,12 +76,19 @@ export const KeyboardVisible: Story = {
   render: () => (
     <View style={{ height: 400, backgroundColor: '#f5f5f5' }}>
       <View style={{ flex: 1, padding: 16 }}>
-        <Text typography="text-sm-regular" color="mutedForeground">
+        <Text
+          typography="text-sm-regular"
+          color="mutedForeground"
+        >
           키보드가 올라오면 좌우 여백 없이 풀폭 버튼으로 전환됩니다.
         </Text>
       </View>
       <View>
-        <Button size="lg" rounded="none" variant="primary">
+        <Button
+          size="lg"
+          rounded="none"
+          variant="primary"
+        >
           다음
         </Button>
       </View>

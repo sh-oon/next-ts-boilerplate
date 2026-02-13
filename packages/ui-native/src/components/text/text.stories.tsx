@@ -9,10 +9,19 @@ const meta: Meta<typeof Text> = {
     typography: {
       control: 'select',
       options: [
-        'title-2xl-bold', 'title-xl-bold', 'title-lg-bold', 'title-md-bold',
-        'title-sm-bold', 'title-xs-bold',
-        'text-lg-regular', 'text-md-regular', 'text-sm-regular', 'text-xs-regular',
-        'label-lg-medium', 'label-md-medium', 'label-sm-medium',
+        'title-2xl-bold',
+        'title-xl-bold',
+        'title-lg-bold',
+        'title-md-bold',
+        'title-sm-bold',
+        'title-xs-bold',
+        'text-lg-regular',
+        'text-md-regular',
+        'text-sm-regular',
+        'text-xs-regular',
+        'label-lg-medium',
+        'label-md-medium',
+        'label-sm-medium',
       ],
     },
     color: {
@@ -40,12 +49,42 @@ export const Default: Story = {};
 export const Titles: Story = {
   render: () => (
     <View style={{ gap: 8 }}>
-      <Text typography="title-2xl-bold" color="foreground">Title 2XL Bold</Text>
-      <Text typography="title-xl-bold" color="foreground">Title XL Bold</Text>
-      <Text typography="title-lg-bold" color="foreground">Title LG Bold</Text>
-      <Text typography="title-md-bold" color="foreground">Title MD Bold</Text>
-      <Text typography="title-sm-bold" color="foreground">Title SM Bold</Text>
-      <Text typography="title-xs-bold" color="foreground">Title XS Bold</Text>
+      <Text
+        typography="title-2xl-bold"
+        color="foreground"
+      >
+        Title 2XL Bold
+      </Text>
+      <Text
+        typography="title-xl-bold"
+        color="foreground"
+      >
+        Title XL Bold
+      </Text>
+      <Text
+        typography="title-lg-bold"
+        color="foreground"
+      >
+        Title LG Bold
+      </Text>
+      <Text
+        typography="title-md-bold"
+        color="foreground"
+      >
+        Title MD Bold
+      </Text>
+      <Text
+        typography="title-sm-bold"
+        color="foreground"
+      >
+        Title SM Bold
+      </Text>
+      <Text
+        typography="title-xs-bold"
+        color="foreground"
+      >
+        Title XS Bold
+      </Text>
     </View>
   ),
 };
@@ -53,10 +92,30 @@ export const Titles: Story = {
 export const BodyText: Story = {
   render: () => (
     <View style={{ gap: 8 }}>
-      <Text typography="text-lg-regular" color="foreground">Text LG Regular</Text>
-      <Text typography="text-md-regular" color="foreground">Text MD Regular</Text>
-      <Text typography="text-sm-regular" color="foreground">Text SM Regular</Text>
-      <Text typography="text-xs-regular" color="foreground">Text XS Regular</Text>
+      <Text
+        typography="text-lg-regular"
+        color="foreground"
+      >
+        Text LG Regular
+      </Text>
+      <Text
+        typography="text-md-regular"
+        color="foreground"
+      >
+        Text MD Regular
+      </Text>
+      <Text
+        typography="text-sm-regular"
+        color="foreground"
+      >
+        Text SM Regular
+      </Text>
+      <Text
+        typography="text-xs-regular"
+        color="foreground"
+      >
+        Text XS Regular
+      </Text>
     </View>
   ),
 };

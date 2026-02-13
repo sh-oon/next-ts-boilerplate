@@ -43,12 +43,14 @@ export function Progress({
   const config = sizeConfig[size];
   const pct = Math.round(Math.min(Math.max(value / max, 0), 1) * 100);
   const fillColor =
-    color === 'primary' ? theme.colors.primary :
-    color === 'accent' ? theme.colors.accent :
-    colorMap[color];
+    color === 'primary'
+      ? theme.colors.primary
+      : color === 'accent'
+        ? theme.colors.accent
+        : colorMap[color];
 
   const [trackWidth, setTrackWidth] = useState(0);
-  const targetWidth = Math.round(trackWidth * pct / 100);
+  const targetWidth = Math.round((trackWidth * pct) / 100);
   const widthAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
