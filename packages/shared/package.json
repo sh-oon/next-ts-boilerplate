@@ -1,7 +1,6 @@
 {
-  "name": "@mono/utils",
+  "name": "@mono/shared",
   "version": "1.0.1",
-  "private": true,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -21,9 +20,14 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.0"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5",
     "@mono/tsconfig": "*",
+    "@biomejs/biome": "^2.2.5",
     "tsup": "^8",
     "typescript": "^5",
     "vitest": "^3"
