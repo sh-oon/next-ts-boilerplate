@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
-    "@mono/ui-components": "*",
-    "@mono/utils": "*",
+    "@mono/shared": "*",
+    "@mono/ui": "*",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24",
     "@types/react": "^19",

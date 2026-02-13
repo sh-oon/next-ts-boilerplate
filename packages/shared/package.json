@@ -26,8 +26,8 @@
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
-    "@mono/tsconfig": "*",
     "@biomejs/biome": "^2.2.5",
+    "@mono/tsconfig": "*",
     "tsup": "^8",
     "typescript": "^5",
     "vitest": "^3"

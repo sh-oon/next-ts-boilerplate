@@ -38,8 +38,8 @@
     "dev:mobile": "yarn workspace @mono/mobile start"
   },
   "devDependencies": {
-    "@mono/tsconfig": "*",
     "@biomejs/biome": "^2.2.5",
+    "@mono/tsconfig": "*",
     "glob": "^11.0.0",
     "husky": "^9",
     "lint-staged": "^15",
