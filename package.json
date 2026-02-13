@@ -23,9 +23,6 @@
     "packages/*"
   ],
   "scripts": {
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "changeset publish",
     "setup": "node scripts/setup.mjs",
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -34,12 +31,15 @@
     "format": "biome format --write .",
     "prepare": "husky",
     "type-check": "turbo run type-check",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "storybook": "turbo run storybook",
+    "storybook:ui": "yarn workspace @mono/ui storybook",
+    "storybook:native": "yarn workspace @mono/storybook-native storybook",
+    "dev:mobile": "yarn workspace @mono/mobile start"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5",
-    "@changesets/cli": "^2.29.4",
     "@mono/tsconfig": "*",
+    "@biomejs/biome": "^2.2.5",
     "glob": "^11.0.0",
     "husky": "^9",
     "lint-staged": "^15",
