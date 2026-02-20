@@ -15,7 +15,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.15",
+    "@biomejs/biome": "^2.4.3",
     "@mono/shared": "*",
     "@mono/ui": "*",
     "@tailwindcss/postcss": "^4",
