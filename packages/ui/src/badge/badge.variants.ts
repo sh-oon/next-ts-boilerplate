@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from '@mono/shared';
+import { cva, type VariantProps } from '@mono/utils';
 
 export const badgeVariants = cva(
   'inline-flex items-center px-3 py-1 text-xs font-medium transition-all duration-200',

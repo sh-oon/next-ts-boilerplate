@@ -1,4 +1,4 @@
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { BadgeVariants } from './badge.variants';
 import { badgeVariants } from './badge.variants';
 

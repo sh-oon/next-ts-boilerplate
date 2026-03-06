@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from '@mono/shared';
+import { cva, type VariantProps } from '@mono/utils';
 
 export const flexVariants = cva(['flex'], {
   variants: {

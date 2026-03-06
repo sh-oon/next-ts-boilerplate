@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { TextareaVariants } from './textarea.variants';
 import { textareaVariants } from './textarea.variants';
 

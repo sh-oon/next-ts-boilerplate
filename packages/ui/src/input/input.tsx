@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useRef, useState } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { InputVariants } from './input.variants';
 import { inputSizeConfig, inputVariants } from './input.variants';
 

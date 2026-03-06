@@ -1,4 +1,4 @@
-import { cva, type VariantProps } from '@mono/shared';
+import { cva, type VariantProps } from '@mono/utils';
 
 export const tagVariants = cva(
   'inline-flex items-center rounded-full transition-all duration-200',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import { Text } from '../text';
 
 const sizeConfig = {

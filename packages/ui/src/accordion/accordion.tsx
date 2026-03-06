@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, use, useCallback, useEffect, useId, useRef, useState } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import gsap from 'gsap';
 import { Text } from '../text';
 

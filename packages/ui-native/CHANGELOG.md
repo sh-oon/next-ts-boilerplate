@@ -1,5 +1,11 @@
 # @mono/ui-native
 
+## 2.0.0
+
+### Major Changes
+
+- Point package exports directly to source files instead of dist
+
 ## 1.1.0
 
 ### Minor Changes

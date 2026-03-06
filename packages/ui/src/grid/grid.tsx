@@ -1,4 +1,4 @@
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { GridVariants } from './grid.variants';
 import { gridVariants } from './grid.variants';
 

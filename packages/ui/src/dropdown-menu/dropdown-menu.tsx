@@ -11,7 +11,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import gsap from 'gsap';
 import { createPortal } from 'react-dom';
 import { Text } from '../text';
