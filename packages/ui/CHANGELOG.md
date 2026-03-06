@@ -1,5 +1,22 @@
 # @mono/ui
 
+## 3.0.0
+
+### Major Changes
+
+- aeeb9e3: Rename packages and point exports to source
+
+  - `@mono/lib` -> `@mono/tokens`
+  - `@mono/shared` -> `@mono/utils`
+  - `bomb-boilerplate` -> `@ziclo/boilerplate`
+  - Point package exports directly to source files instead of dist
+
+### Patch Changes
+
+- Updated dependencies [aeeb9e3]
+  - @mono/tokens@2.0.0
+  - @mono/utils@2.0.0
+
 ## 2.0.0
 
 ### Major Changes
