@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import gsap from 'gsap';
 import { overlay } from 'overlay-kit';
 import { createPortal } from 'react-dom';

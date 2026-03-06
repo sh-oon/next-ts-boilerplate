@@ -1,7 +1,7 @@
 'use client';
 
 import { useId } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 
 export interface FieldProps {
   label?: string;

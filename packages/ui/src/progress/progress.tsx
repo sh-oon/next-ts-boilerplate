@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import { Text } from '../text';
 
 /* ---------------------------------- Types --------------------------------- */

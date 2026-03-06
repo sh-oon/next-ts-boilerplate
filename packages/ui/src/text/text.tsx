@@ -1,4 +1,4 @@
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { TextAlign, TextColor, Typography } from './text.variants';
 import { alignClassMap, colorClassMap } from './text.variants';
 

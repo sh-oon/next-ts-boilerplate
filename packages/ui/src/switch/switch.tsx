@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { cn, cva, type VariantProps } from '@mono/shared';
+import { cn, cva, type VariantProps } from '@mono/utils';
 import { Text } from '../text';
 
 const switchTrackVariants = cva(

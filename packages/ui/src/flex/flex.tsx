@@ -1,4 +1,4 @@
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import type { FlexVariants } from './flex.variants';
 import { flexVariants } from './flex.variants';
 

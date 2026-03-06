@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import { XIcon } from '../icons';
 import { Text } from '../text';
 import type { Typography } from '../text/text.variants';

@@ -1,4 +1,11 @@
-# @mono/shared
+# @mono/utils
+
+## 2.0.0
+
+### Major Changes
+
+- Rename `@mono/shared` to `@mono/utils`
+- Point package exports directly to source files instead of dist
 
 ## 1.1.0
 
@@ -6,7 +13,7 @@
 
 - f1dab64: Add design system packages
 
-  - **@mono/shared**: Rename from @mono/utils, add `cn()` and `cva` utilities
+  - **@mono/utils**: Rename from @mono/utils, add `cn()` and `cva` utilities
   - **@mono/lib**: New CSS design tokens package (tokens, semantic, typography)
   - **@mono/ui**: Complete web UI component library with 25+ components and Storybook
   - **@mono/ui-native**: React Native UI component library with theme system
