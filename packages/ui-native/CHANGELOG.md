@@ -1,5 +1,11 @@
 # @mono/ui-native
 
+## 2.0.0
+
+### Major Changes
+
+- Point package exports directly to source files instead of dist
+
 ## 1.1.0
 
 ### Minor Changes
@@ -11,7 +17,3 @@
   - **@mono/ui**: Complete web UI component library with 25+ components and Storybook
   - **@mono/ui-native**: React Native UI component library with theme system
   - **@mono/tsconfig**: Add react-library config updates
-
-### Patch Changes
-
-- Point package exports directly to source files instead of dist
