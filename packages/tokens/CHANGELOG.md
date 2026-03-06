@@ -1,12 +1,5 @@
 # @mono/tokens
 
-## 2.0.0
-
-### Major Changes
-
-- Rename `@mono/lib` to `@mono/tokens`
-- Point package exports directly to source files instead of dist
-
 ## 1.1.0
 
 ### Minor Changes
