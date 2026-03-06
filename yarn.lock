@@ -1413,28 +1413,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mono/lib@workspace:*, @mono/lib@workspace:packages/lib":
+"@mono/tokens@workspace:*, @mono/tokens@workspace:packages/tokens":
   version: 0.0.0-use.local
-  resolution: "@mono/lib@workspace:packages/lib"
+  resolution: "@mono/tokens@workspace:packages/tokens"
   dependencies:
     "@biomejs/biome": "npm:^2.3.15"
     "@mono/tsconfig": "npm:*"
     typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
-
-"@mono/shared@npm:*, @mono/shared@workspace:*, @mono/shared@workspace:packages/shared":
-  version: 0.0.0-use.local
-  resolution: "@mono/shared@workspace:packages/shared"
-  dependencies:
-    "@biomejs/biome": "npm:^2.3.15"
-    "@mono/tsconfig": "npm:*"
-    class-variance-authority: "npm:^0.7.1"
-    clsx: "npm:^2.1.1"
-    tailwind-merge: "npm:^3.3.0"
-    tsup: "npm:^8"
-    typescript: "npm:^5"
-    vitest: "npm:^4"
   languageName: unknown
   linkType: soft
 
@@ -1469,9 +1454,9 @@ __metadata:
   resolution: "@mono/ui@workspace:packages/ui"
   dependencies:
     "@biomejs/biome": "npm:^2.3.15"
-    "@mono/lib": "workspace:*"
-    "@mono/shared": "workspace:*"
+    "@mono/tokens": "workspace:*"
     "@mono/tsconfig": "npm:*"
+    "@mono/utils": "workspace:*"
     "@storybook/react": "npm:^10"
     "@storybook/react-vite": "npm:^10"
     "@tailwindcss/vite": "npm:^4"
@@ -1495,13 +1480,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@mono/utils@npm:*, @mono/utils@workspace:*, @mono/utils@workspace:packages/utils":
+  version: 0.0.0-use.local
+  resolution: "@mono/utils@workspace:packages/utils"
+  dependencies:
+    "@biomejs/biome": "npm:^2.3.15"
+    "@mono/tsconfig": "npm:*"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^2.1.1"
+    tailwind-merge: "npm:^3.3.0"
+    tsup: "npm:^8"
+    typescript: "npm:^5"
+    vitest: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
 "@mono/web@workspace:apps/web":
   version: 0.0.0-use.local
   resolution: "@mono/web@workspace:apps/web"
   dependencies:
     "@biomejs/biome": "npm:^2.3.15"
-    "@mono/shared": "npm:*"
     "@mono/ui": "npm:*"
+    "@mono/utils": "npm:*"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^25"
     "@types/react": "npm:^19"

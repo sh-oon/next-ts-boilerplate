@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, use, useCallback, useId, useRef, useState } from 'react';
-import { cn } from '@mono/shared';
+import { cn } from '@mono/utils';
 import { Text } from '../text';
 
 /* ---------------------------------- Types --------------------------------- */
