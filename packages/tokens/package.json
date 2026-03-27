@@ -7,8 +7,8 @@
     "./typography.css": "./src/typography.css"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.15",
+    "@biomejs/biome": "^2.4.9",
     "@mono/tsconfig": "*",
-    "typescript": "^5"
+    "typescript": "^6"
   }
 }
